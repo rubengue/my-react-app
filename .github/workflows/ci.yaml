@@ -11,12 +11,13 @@ jobs:
     steps:
       
       - uses: actions/checkout@v2
-      # - name: Uses Node JS
-      #   uses: action/setup-node@v2
-      #   with:
-      #     node-version: '14'
-      # - run: npm ci
-      # - run: npm test -- --coverage
-      #   env:
-      #     CI: true
-      - run: npm -v
+
+      - name: Uses Node JS
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm ci
+      - run: npm test -- --coverage
+        env:
+          CI: true
+      

@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@2
+      - uses: actions/checkout@2.4.0
       - name: Uses Node JS
-        uses: action/setup-node@v2
+        uses: action/setup-node@v2.4.1
         with:
           node-version: '14'
       - run: |

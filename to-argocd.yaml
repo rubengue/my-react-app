@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myreact-app
+  namespace: default
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/rubengue/my-react-app
+    targetRevision: HEAD
+    path: dev
+  destination:
+   server: https://kubernetes.default.svc
+   namespace: default
